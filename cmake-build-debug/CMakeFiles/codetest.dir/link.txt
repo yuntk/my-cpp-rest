@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/codetest.dir/main.cpp.o  -o codetest -lboost_system -lcrypto -lssl -lcpprest 

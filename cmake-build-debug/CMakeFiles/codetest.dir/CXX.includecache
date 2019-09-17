@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tk/CLionProjects/codetest/main.cpp
+iostream
+-
+myrest.h
+/home/tk/CLionProjects/codetest/myrest.h
+
+/home/tk/CLionProjects/codetest/myrest.h
+cpprest/http_client.h
+-
+cpprest/json.h
+-
+
