@@ -8,6 +8,7 @@
 #define CLIENT_URI "http://localhost:8000/"
 #define DEBUG true
 
+#include <ctime>
 #include <cpprest/http_client.h>
 #include <cpprest/json.h>
 //#include <cpprest/filestream.h>
@@ -38,10 +39,11 @@ web::json::value my_post(const std::string& uri, const web::json::value& json_, 
                     json_return = task.get();
                 }
                 catch (const web::http::http_exception &e) {
-                    std::cout << "error " << e.what() << std::endl;
+                    std::cout << "error : " << e.what() << std::endl;
                 }
             })
             .wait();
+    //usleep(10000);
     return json_return;
 }
 
@@ -62,10 +64,11 @@ web::json::value my_get(const std::string& uri, const std::string& header = "") 
                     json_return = task.get();
                 }
                 catch (const web::http::http_exception &e) {
-                    std::cout << "error " << e.what() << std::endl;
+                    std::cout << "error : " << e.what() << std::endl;
                 }
             })
             .wait();
+    //usleep(10000);
     return json_return;
 }
 
